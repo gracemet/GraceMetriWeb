@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Grace Metri's CV</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3@0.20.5/dist/web3.min.js"></script>
+
+    <script type="text/javascript" src="spotify.js"></script>
+
+</head>
+
+<body>
+    <p id="top"></p>
+
+    <!--Navigation Menu-->
+    <ul class="nav">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="cv.php">CV</a></li>
+        <li><a class="active" href="spotify.php">Projects</a></li>
+        <li><a href="https://www.linkedin.com/in/grace-metri-419478264" target="_blank"><img
+                    src="pictures/linkedin.png"></a></li>
+    </ul>
+    
+    <!--PHP Section-->
+    <?php 
+    //$base = 'https://api.spotify.com/';
+
+    // Initialize variables
+    $username = $password = $playlist1 = $playlist2 = "";
+    $userErr = $passErr = $play1Err = $play2Err = "";
+    //$access_token = "";
+    //$client_id = 'eb2b981ad37140eeaa19ef660e9a9280';
+    //$client_secret = '4b454e2afe8e4bad9aed9d4977cda034';
+
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+      }
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+      // get expression using POST
+      if(empty($_POST["username"]))
+        $userErr = "Name is empty";
+      else
+        $username = test_input($_POST["username"]);
+
+      if(empty($_POST["password"]))
+        $passErr = "Password is empty";
+      else
+        $password = test_input($_POST["password"]);
+        
+      if(empty($_POST["playlist1"]))
+        $play1Err = "Entry is empty";
+      else
+        $playlist1 = test_input($_POST["playlist1"]);
+      
+      if(empty($_POST["playlist2"]))
+        $play2Err = "Entry is empty";
+      else
+        $playlist1 = test_input($_POST["playlist2"]);
+    }
+
+    
+
+    ?>
+
+    <div class="main">
+        <h1>Spotify API</h1>
+
+        <form id="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+            <table id="spotifyInfo">
+                <tr>
+                    <td>Username:&nbsp </td>
+                    <td>
+                        <input type="text" name="username" id="username" value="<?php echo $username;?>"><span
+                            class="error">* <?php echo $userErr;?></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Password:&nbsp</td>
+                    <td>
+                        <input type="password" name="password" id="password" value=""><span class="error">*
+                            <?php echo $passErr;?></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Playlist 1:&nbsp</td>
+                    <td>
+                        <input type="text" name="playlist1" id="playlist1" value=""><span class="error">*
+                            <?php echo $play1Err;?></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Playlist 2:&nbsp</td>
+                    <td>
+                        <input type="text" name="playlist2" id="playlist2" value=""><span class="error">*
+                            <?php echo $play2Err;?></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=2 style="text-align:center;"><input type="submit" name="submit" id="submit" onclick="requests.post()">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <?php 
+            //echo $access_token;
+        ?>
+    </div>
+
+
+
+    <!--Bookmark to top of page -->
+    <a href="#top">
+        <div class="circle">
+            &#x2912;
+        </div>
+    </a>
+
+</body>

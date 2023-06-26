@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Grace Metri's CV</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <p id="top"></p>
+  
+  <!--Navigation Menu-->
+  <ul class="nav">
+    <li><a href="index.php">Home</a></li>
+    <li><a class="active" href="cv.php">CV</a></li>
+    <li><a href="spotify.php">Projects</a></li>
+    <li><a href="https://www.linkedin.com/in/grace-metri-419478264" target="_blank"><img
+          src="pictures/linkedin.png"></a></li>
+  </ul>
+
+  <!--Main Panel with Content-->
+  <div class="main">
+    <h1>Grace Metri</h1>
+    <h4>Email: gnm2i@mtmail.mtsu.edu | Phone: 615-555-5555</h4>
+
+    <!--Table Example-->
+    <h3>Education Background</h3>
+    <table class="table">
+      <tr>
+        <th>School</th>
+        <th>Years Attended</th>
+        <th>Major</th>
+      </tr>
+      <tr>
+        <td>Oakland High School</td>
+        <td>Fall 2016 - Spring 2020</td>
+        <td>N/A</td>
+      </tr>
+      <tr>
+        <td>Middle Tennessee State University</td>
+        <td>Fall 2020 - Spring 2024</td>
+        <td>Computer Science</td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!--Unordered list of skills-->
+    <div class="right">
+      <h3>Skills</h3>
+      <ul>
+        <li>Python</li>
+        <li>C++</li>
+        <li>C</li>
+        <li>Assembly</li>
+        <li>HTML</li>
+        <li>Microsoft Office</li>
+      </ul>
+    </div>
+
+    <br>
+    <!-- Table with list -->
+    <h3>Work Experience</h3>
+    <table>
+      <tr>
+        <td>Work Study | MTSU | Researcher</td>
+        <td>&emsp;&emsp;May 2022 - July 2022</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <ul>
+            <li>Research on fMRI Connectivity</li>
+            <li>Used CONN toolbox to conduct analysis</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Walmart | Sales Associate</td>
+        <td>&emsp;&emsp;Dec 2020 - Present</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <ul>
+            <li>Responsible for clean work area</li>
+            <li>Relatively fast-paced environment</li>
+            <li>Flexibility with working different positions</li>
+            <li>Operated a cash register and POS system</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+    <!--Link to research pdf-->
+    <h3>Research</h3>
+    <a href="research.pdf" target="_blank" title="Research">Connectivity Research using CONN</a>
+
+  </div>
+
+  <!--Bookmark to top of page -->
+  <a href="#top">
+    <div class="circle">
+      &#x2912;
+    </div>
+  </a>
+
+
+  <!--
+  <script src="script.js"></script>
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+  -->
+
+</body>
+
+</html>
