@@ -17,8 +17,8 @@
 
     <!--Navigation Menu-->
     <ul class="nav">
-        <li><a href="index.php">Home</a></li>
-        <li><a href="cv.php">CV</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
         <li><a class="active" href="spotify.php">Projects</a></li>
         <li><a href="https://www.linkedin.com/in/grace-metri-419478264" target="_blank"><img
                     src="pictures/linkedin.png"></a></li>
